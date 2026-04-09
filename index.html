@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olympus Aegean Cafe - Greece Theme</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="greek-bg text-slate-800">
+    <nav class="sticky top-0 z-50 border-b border-slate-200 bg-white/85 backdrop-blur">
+      <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
+        <div class="flex items-center gap-3">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-700 text-white">Ω</div>
+          <div>
+            <h1 class="text-lg font-semibold tracking-wide text-slate-900">OLYMPUS AEGEAN</h1>
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Greek Cafe</p>
+          </div>
+        </div>
+        <ul class="hidden items-center gap-6 text-sm font-medium md:flex">
+          <li><a class="nav-link" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#menu">Menu</a></li>
+          <li><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-3">
+          <button id="cartBtn" class="relative rounded-full bg-blue-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-800">
+            Cart
+            <span id="cartCount" class="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-sky-500 text-xs">0</span>
+          </button>
+          <button class="md:hidden text-xl text-slate-700">☰</button>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="border-b border-slate-200 bg-gradient-to-b from-blue-50 to-white">
+      <div class="mx-auto grid min-h-[72vh] max-w-7xl items-center gap-10 px-4 py-14 lg:grid-cols-2">
+        <div>
+          <p class="mb-3 text-sm uppercase tracking-[0.22em] text-blue-700">Santorini Inspired</p>
+          <h2 class="mb-5 text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl md:text-5xl">
+            Olympus tradition, <br />
+            Aegean calm.
+          </h2>
+          <p class="mb-8 max-w-lg text-slate-600">
+            A Greece-themed cafe in Goa with white-and-blue interiors, signature coffee, Mediterranean brunch, and a clean minimal atmosphere for every mood.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <button onclick="scrollToMenu()" class="rounded-md bg-blue-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800">Explore Menu</button>
+            <a href="#gallery" class="rounded-md border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-blue-700 hover:text-blue-700">View Gallery</a>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80"
+            alt="Clean Greek cafe interior"
+            class="mb-4 h-64 w-full rounded-2xl object-cover image-frame sm:h-80"
+            loading="eager"
+            onerror="this.onerror=null;this.src='https://source.unsplash.com/1200x800/?greek,cafe,interior,modern';"
+          />
+          <div class="grid gap-4 sm:grid-cols-2">
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p class="text-sm text-slate-500">Serving Time</p>
+            <p class="mt-1 text-2xl font-semibold text-slate-900">20-30 mins</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p class="text-sm text-slate-500">Guest Rating</p>
+            <p class="mt-1 text-2xl font-semibold text-slate-900">4.9 / 5</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p class="text-sm text-slate-500">Location</p>
+            <p class="mt-1 text-xl font-semibold text-slate-900">Fontainhas, Goa</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p class="text-sm text-slate-500">Open Daily</p>
+            <p class="mt-1 text-xl font-semibold text-slate-900">8:00 AM - 11:00 PM</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 py-14">
+      <div class="mb-10 text-center">
+        <p class="text-sm uppercase tracking-[0.2em] text-blue-700">Quick Info</p>
+        <h3 class="mt-2 text-3xl font-semibold text-slate-900">Simple details, thoughtful service</h3>
+      </div>
+      <div class="grid gap-5 md:grid-cols-4">
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h4 class="mb-2 text-lg font-semibold text-slate-900">Fast Delivery</h4>
+          <p class="text-slate-600">Hot meals and cold brews delivered quickly across Panaji.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h4 class="mb-2 text-lg font-semibold text-slate-900">Fresh Ingredients</h4>
+          <p class="text-slate-600">Olive oil, feta, herbs, and local produce prepared daily.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h4 class="mb-2 text-lg font-semibold text-slate-900">Minimal Ambience</h4>
+          <p class="text-slate-600">A calm white-blue cafe with warm lighting and soft acoustics.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h4 class="mb-2 text-lg font-semibold text-slate-900">Best Value</h4>
+          <p class="text-slate-600">Premium Greek flavors at easy cafe pricing in INR.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="menu" class="border-y border-slate-200 bg-white px-4 py-16">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-10 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-end">
+          <div>
+            <p class="text-sm uppercase tracking-[0.2em] text-blue-700">Cafe Menu</p>
+            <h3 class="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">Greek classics and cafe favorites</h3>
+          </div>
+          <p class="text-sm text-slate-500">Prices in INR</p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <article class="menu-item overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Freddo Espresso" class="h-40 w-full object-cover image-frame" loading="lazy" onerror="this.onerror=null;this.src='https://source.unsplash.com/900x600/?coffee,cafe,greek';" />
+            <div class="p-5">
+              <h4 class="text-xl font-semibold text-slate-900">Greek Freddo Espresso</h4>
+              <p class="mt-2 text-sm text-slate-600">Iced double espresso with smooth foam and balanced sweetness.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="text-2xl font-semibold text-blue-700">₹180</span>
+                <button onclick="addToCart('Greek Freddo Espresso', 180)" class="rounded-md bg-blue-700 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-800">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+            <img src="https://images.pexels.com/photos/6941030/pexels-photo-6941030.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Spanakopita" class="h-40 w-full object-cover image-frame" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1543332164-6e82f355bad5?auto=format&fit=crop&w=900&q=80';" />
+            <div class="p-5">
+              <h4 class="text-xl font-semibold text-slate-900">Spanakopita Slice</h4>
+              <p class="mt-2 text-sm text-slate-600">Flaky spinach-feta pastry, warm and crisp from the oven.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="text-2xl font-semibold text-blue-700">₹220</span>
+                <button onclick="addToCart('Spanakopita Slice', 220)" class="rounded-md bg-blue-700 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-800">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+            <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=900&q=80" alt="Breakfast bowl" class="h-40 w-full object-cover image-frame" loading="lazy" onerror="this.onerror=null;this.src='https://source.unsplash.com/900x600/?healthy,breakfast,bowl';" />
+            <div class="p-5">
+              <h4 class="text-xl font-semibold text-slate-900">Aegean Breakfast Bowl</h4>
+              <p class="mt-2 text-sm text-slate-600">Greek yogurt, honey, nuts, fresh fruit, and sesame crunch.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="text-2xl font-semibold text-blue-700">₹260</span>
+                <button onclick="addToCart('Aegean Breakfast Bowl', 260)" class="rounded-md bg-blue-700 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-800">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+            <img src="https://images.pexels.com/photos/2233729/pexels-photo-2233729.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Souvlaki wrap" class="h-40 w-full object-cover image-frame" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?auto=format&fit=crop&w=900&q=80';" />
+            <div class="p-5">
+              <h4 class="text-xl font-semibold text-slate-900">Chicken Souvlaki Wrap</h4>
+              <p class="mt-2 text-sm text-slate-600">Char-grilled skewers wrapped in pita with tzatziki and herbs.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="text-2xl font-semibold text-blue-700">₹340</span>
+                <button onclick="addToCart('Chicken Souvlaki Wrap', 340)" class="rounded-md bg-blue-700 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-800">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80" alt="Greek salad" class="h-40 w-full object-cover image-frame" loading="lazy" onerror="this.onerror=null;this.src='https://source.unsplash.com/900x600/?salad,mediterranean';" />
+            <div class="p-5">
+              <h4 class="text-xl font-semibold text-slate-900">Santorini Greek Salad</h4>
+              <p class="mt-2 text-sm text-slate-600">Tomato, cucumber, olives, feta, oregano, olive oil dressing.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="text-2xl font-semibold text-blue-700">₹290</span>
+                <button onclick="addToCart('Santorini Greek Salad', 290)" class="rounded-md bg-blue-700 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-800">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+            <img src="https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=900&q=80" alt="Baklava and tea" class="h-40 w-full object-cover image-frame" loading="lazy" onerror="this.onerror=null;this.src='https://source.unsplash.com/900x600/?dessert,tea';" />
+            <div class="p-5">
+              <h4 class="text-xl font-semibold text-slate-900">Baklava & Citrus Tea</h4>
+              <p class="mt-2 text-sm text-slate-600">Nut-filled baklava with aromatic warm citrus-herb tea.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="text-2xl font-semibold text-blue-700">₹210</span>
+                <button onclick="addToCart('Baklava and Citrus Tea', 210)" class="rounded-md bg-blue-700 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-800">Add</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="mx-auto max-w-7xl px-4 py-16">
+      <div class="mb-8 text-center">
+        <p class="text-sm uppercase tracking-[0.2em] text-blue-700">Gallery</p>
+        <h3 class="mt-2 text-3xl font-semibold text-slate-900">A clean Greece cafe moodboard</h3>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Cafe interior" class="h-56 w-full rounded-xl object-cover image-frame" loading="lazy" onerror="this.onerror=null;this.src='https://source.unsplash.com/900x900/?cafe,interior';" />
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Coffee on table" class="h-56 w-full rounded-xl object-cover image-frame" loading="lazy" onerror="this.onerror=null;this.src='https://source.unsplash.com/900x900/?coffee,table';" />
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80" alt="Mediterranean food" class="h-56 w-full rounded-xl object-cover image-frame" loading="lazy" onerror="this.onerror=null;this.src='https://source.unsplash.com/900x900/?mediterranean,food';" />
+        <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=900&q=80" alt="Greek style architecture" class="h-56 w-full rounded-xl object-cover image-frame" loading="lazy" onerror="this.onerror=null;this.src='https://source.unsplash.com/900x900/?greece,architecture';" />
+      </div>
+    </section>
+
+    <section id="about" class="border-y border-slate-200 bg-white px-4 py-16">
+      <div class="mx-auto grid max-w-7xl gap-10 md:grid-cols-2">
+        <div>
+          <p class="text-sm uppercase tracking-[0.2em] text-blue-700">About Olympus Aegean</p>
+          <h3 class="mt-2 text-3xl font-semibold text-slate-900">A little Greece by the Goan coast</h3>
+          <p class="mt-4 text-slate-600">
+            This concept integrates the energy of Olympus with the calm of Aegean design. We kept your original food-first project structure and elevated it into a complete Greek cafe experience.
+          </p>
+          <p class="mt-4 text-slate-600">
+            Expect handcrafted coffee, modern Mediterranean plates, and a timeless minimal interior that feels serene from morning brunch to evening dinner.
+          </p>
+          <div class="mt-6 grid grid-cols-3 gap-3">
+            <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-center">
+              <p class="text-2xl font-semibold text-blue-700">1200+</p>
+              <p class="text-xs text-slate-500">Happy Guests</p>
+            </div>
+            <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-center">
+              <p class="text-2xl font-semibold text-blue-700">30+</p>
+              <p class="text-xs text-slate-500">Cafe Items</p>
+            </div>
+            <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-center">
+              <p class="text-2xl font-semibold text-blue-700">4.9</p>
+              <p class="text-xs text-slate-500">Average Rating</p>
+            </div>
+          </div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80" alt="Greek style cafe seating" class="h-full min-h-[320px] w-full rounded-2xl object-cover image-frame" loading="lazy" onerror="this.onerror=null;this.src='https://source.unsplash.com/1200x800/?greek,cafe,interior';" />
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 py-16">
+      <div class="mb-8 text-center">
+        <p class="text-sm uppercase tracking-[0.2em] text-blue-700">Reviews</p>
+        <h3 class="mt-2 text-3xl font-semibold text-slate-900">What guests say</h3>
+      </div>
+      <div class="grid gap-5 md:grid-cols-3">
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="mb-3 text-amber-500">★★★★★</p>
+          <p class="text-slate-600">"The Greek coffee and ambience are incredible. Clean and relaxing space!"</p>
+          <p class="mt-4 font-semibold text-slate-900">Anaya R.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="mb-3 text-amber-500">★★★★★</p>
+          <p class="text-slate-600">"Loved the souvlaki wrap and salad combo. Fresh, balanced, and worth it."</p>
+          <p class="mt-4 font-semibold text-slate-900">Rohit M.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="mb-3 text-amber-500">★★★★★</p>
+          <p class="text-slate-600">"Perfect place for brunch meetings. Minimal design and excellent service."</p>
+          <p class="mt-4 font-semibold text-slate-900">Sara P.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="border-t border-slate-200 bg-white px-4 py-16">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-8">
+          <p class="text-sm uppercase tracking-[0.2em] text-blue-700">Contact</p>
+          <h3 class="mt-2 text-3xl font-semibold text-slate-900">Reserve a table or say hello</h3>
+        </div>
+        <div class="grid gap-8 md:grid-cols-2">
+          <form id="contactForm" class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <label class="mb-2 block text-sm font-medium text-slate-700">Name</label>
+            <input type="text" required class="mb-4 w-full rounded-md border border-slate-300 px-4 py-3 focus:border-blue-600 focus:outline-none" placeholder="Your name" />
+            <label class="mb-2 block text-sm font-medium text-slate-700">Email</label>
+            <input type="email" required class="mb-4 w-full rounded-md border border-slate-300 px-4 py-3 focus:border-blue-600 focus:outline-none" placeholder="you@example.com" />
+            <label class="mb-2 block text-sm font-medium text-slate-700">Message</label>
+            <textarea required class="mb-5 h-28 w-full resize-none rounded-md border border-slate-300 px-4 py-3 focus:border-blue-600 focus:outline-none" placeholder="Tell us what you need"></textarea>
+            <button type="submit" class="w-full rounded-md bg-blue-700 px-4 py-3 font-semibold text-white hover:bg-blue-800">Send Message</button>
+          </form>
+          <div class="space-y-4">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <h4 class="text-lg font-semibold text-slate-900">Location</h4>
+              <p class="mt-2 text-slate-600">Fontainhas, Panaji, Goa</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <h4 class="text-lg font-semibold text-slate-900">Call</h4>
+              <p class="mt-2 text-slate-600">+91 98765 43210</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <h4 class="text-lg font-semibold text-slate-900">Hours</h4>
+              <p class="mt-2 text-slate-600">Mon-Sun: 8:00 AM - 11:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t border-slate-200 bg-[#f1f5f9] px-4 py-10">
+      <div class="mx-auto flex max-w-7xl flex-col justify-between gap-3 text-sm text-slate-600 md:flex-row">
+        <p>© 2026 Olympus Aegean Cafe. All rights reserved.</p>
+        <p>Greek flavors, clean design, warm hospitality.</p>
+      </div>
+    </footer>
+
+    <div id="cartModal" class="fixed inset-0 z-50 hidden bg-black/40 px-4 py-8">
+      <div class="mx-auto max-h-[90vh] w-full max-w-xl overflow-auto rounded-2xl bg-white p-6 shadow-2xl">
+        <div class="mb-4 flex items-center justify-between">
+          <h3 class="text-2xl font-semibold text-slate-900">Your Cart</h3>
+          <button onclick="closeCart()" class="rounded-md border border-slate-300 px-3 py-1 text-sm text-slate-600 hover:bg-slate-100">Close</button>
+        </div>
+        <div id="cartItems" class="space-y-3"></div>
+        <div class="mt-6 flex items-center justify-between border-t border-slate-200 pt-4">
+          <p class="text-lg font-medium text-slate-700">Total</p>
+          <p id="cartTotal" class="text-2xl font-semibold text-blue-700">₹0</p>
+        </div>
+        <button onclick="checkout()" class="mt-4 w-full rounded-md bg-blue-700 px-4 py-3 font-semibold text-white hover:bg-blue-800">Checkout</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
